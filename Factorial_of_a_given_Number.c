@@ -1,11 +1,17 @@
 #include<stdio.h>
+int fact(int);
 int main()
 {
-    int a,i,b=1;
-    scanf("%d",&a);
-    for(i=1;i<=a;i++)
-    {
-        b=b*i;
-    }
-    printf("%d",b);
+    int n,x;
+    scanf("%d",&n);
+    x=fact(n);
+    printf("%d",x);
+    return 0;
+}
+int fact(int n)
+{
+    if(n==0)
+    return 1;
+    else
+    return (n*fact(n-1));
 }
